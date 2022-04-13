@@ -1,0 +1,7 @@
+CREATE TABLE
+    IF NOT EXISTS message
+(
+    id   INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    text VARCHAR(50)         NOT NULL
+) ENGINE = INNODB
+  DEFAULT charset = utf8
