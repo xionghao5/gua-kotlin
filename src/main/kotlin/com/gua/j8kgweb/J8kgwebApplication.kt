@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class J8kgwebApplication
 
 fun main(args: Array<String>) {
-	runApplication<J8kgwebApplication>(*args)
+    runApplication<J8kgwebApplication>(*args)
 }

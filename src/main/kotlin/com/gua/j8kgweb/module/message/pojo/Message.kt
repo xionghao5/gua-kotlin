@@ -1,4 +1,4 @@
-package com.gua.j8kgweb.pojo
+package com.gua.j8kgweb.module.message.pojo
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.relational.core.mapping.Table

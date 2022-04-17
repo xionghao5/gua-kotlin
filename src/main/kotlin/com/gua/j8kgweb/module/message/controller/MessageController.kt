@@ -1,7 +1,7 @@
-package com.gua.j8kgweb.controller
+package com.gua.j8kgweb.module.message.controller
 
-import com.gua.j8kgweb.pojo.Message
-import com.gua.j8kgweb.service.MessageService
+import com.gua.j8kgweb.module.message.pojo.Message
+import com.gua.j8kgweb.module.message.service.MessageService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
@@ -15,7 +15,7 @@ class MessageController(val service: MessageService) {
     }
 
     @GetMapping("/addOne")
-    fun addOne(){
-         service.addOne()
+    fun addOne() {
+        service.addOne()
     }
 }
