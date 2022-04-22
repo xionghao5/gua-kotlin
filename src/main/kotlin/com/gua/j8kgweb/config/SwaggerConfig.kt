@@ -23,7 +23,7 @@ class SwaggerConfig {
         return Docket(DocumentationType.SWAGGER_2)
             .pathMapping("/")
             .select()
-            .apis(RequestHandlerSelectors.basePackage("com.gua.j8kgweb.**.controller"))
+            .apis(RequestHandlerSelectors.basePackage("com.gua.j8kgweb"))
             .paths(PathSelectors.any())
             .build().apiInfo(
                 ApiInfoBuilder()

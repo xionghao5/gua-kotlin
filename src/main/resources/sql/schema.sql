@@ -1,3 +1,5 @@
+CREATE DATABASE `kotlin` CHARACTER SET 'utf8' COLLATE 'utf8_bin';
+
 CREATE TABLE
     IF NOT EXISTS message
 (
