@@ -26,6 +26,7 @@ dependencies {
 	implementation("com.baomidou:mybatis-plus-generator:3.5.2")
 	implementation("io.springfox:springfox-swagger2:2.9.2")
 	implementation("io.springfox:springfox-swagger-ui:2.9.2")
+	implementation("com.alibaba:druid-spring-boot-starter:1.2.9")
 	implementation("com.baomidou:dynamic-datasource-spring-boot-starter:3.5.1")
 	runtimeOnly("mysql:mysql-connector-java")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
