@@ -2,4 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.gua.j8kgweb.module.user.mapper.UserMapper">
 
+    <select id="selectUserById" resultType="com.gua.j8kgweb.module.user.pojo.UserDTO">
+        select username,
+               password
+        from sys_user
+        where id = #{id}
+    </select>
+
 </mapper>
