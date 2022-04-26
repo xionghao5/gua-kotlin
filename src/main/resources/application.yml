@@ -4,13 +4,13 @@ server:
 
 spring:
   autoconfigure:
-    #????? ????
+    #自动化配置 例外处理
     exclude: com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure
-  # dynamic-datasource-spring-boot-starter ??????????
+  # dynamic-datasource-spring-boot-starter 动态数据源的配置内容
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     dynamic:
-      primary: master # ???????????????????? master
+      primary: master # 设置默认的数据源或者数据源组，默认值即为 master
       datasource:
         master:
           driver-class-name: com.mysql.cj.jdbc.Driver
@@ -22,34 +22,30 @@ spring:
           url: jdbc:mysql://localhost:3306/kotlin2
           username: root
           password: 888
-      #dynamic - ????
-      druid:
-        initialSize: 5
-        minIdle: 5
-        maxActive: 30
-        maxWait: 60000
-        timeBetweenEvictionRunsMillis: 60000
-        minEvictableIdleTimeMillis: 300000
-        validationQuery: SELECT 'x'
-        testWhileIdle: true
-        testOnBorrow: false
-        testOnReturn: false
-        poolPreparedStatements: true
-        maxPoolPreparedStatementPerConnectionSize: 20
-        filters: stat,wall,slf4j,config
-        useGlobalDataSourceStat: true
-        stat:
-          log-slow-sql: true
-          merge-sql: true
-          slow-sql-millis: 10000
     druid:
-      # ????
+      initialSize: 5
+      minIdle: 5
+      maxActive: 30
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      filters: stat,wall,slf4j,config
+      useGlobalDataSourceStat: true
+      stat:
+        log-slow-sql: true
+        merge-sql: true
+        slow-sql-millis: 10000
+      # 默认true 内置监控页面首页/druid/index.html
       statViewServlet:
         enabled: true
-        # ???????????????
         allow:
         url-pattern: /druid/*
-        # ???????????
         login-username: root
         login-password: 888
 
