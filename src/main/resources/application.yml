@@ -49,4 +49,7 @@ spring:
         login-username: root
         login-password: 888
 
-
+# 打印sql和参数的日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
