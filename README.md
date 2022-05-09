@@ -9,4 +9,5 @@ mybatis puls,
 swagger,
 mysql,
 多数据源,
-druid
+druid,
+logback
