@@ -1,8 +1,10 @@
 package com.gua.j8kgweb.module.user.controller
 
 import com.baomidou.dynamic.datasource.annotation.DS
+import com.baomidou.mybatisplus.core.metadata.IPage
 import com.gua.j8kgweb.module.user.entity.User
 import com.gua.j8kgweb.module.user.pojo.UserDTO
+import com.gua.j8kgweb.module.user.pojo.UserQO
 import com.gua.j8kgweb.module.user.service.IUserService
 import io.swagger.annotations.Api
 import io.swagger.annotations.ApiOperation
@@ -28,6 +30,12 @@ class UserController(
     @DS("db2")
     fun getAll(): List<User> {
         return service.list()
+    }
+
+    @ApiOperation("获取用户分页")
+    @PostMapping("/getPage")
+    fun getPage(@RequestBody userQO: UserQO): IPage<UserDTO> {
+        return service.getPage(userQO)
     }
 
     @ApiOperation("添加用户")

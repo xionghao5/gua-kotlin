@@ -9,4 +9,11 @@
         where id = #{id}
     </select>
 
+    <select id="selectUserPage" resultType="com.gua.j8kgweb.module.user.pojo.UserDTO">
+        select username,
+               password
+        from sys_user
+        where username = #{username}
+    </select>
+
 </mapper>
