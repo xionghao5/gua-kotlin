@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page
 import com.gua.j8kgweb.module.user.entity.User
 import com.gua.j8kgweb.module.user.pojo.UserDTO
+import com.gua.j8kgweb.module.user.pojo.UserQO
 import org.apache.ibatis.annotations.Mapper
 
 /**
@@ -22,5 +23,5 @@ interface UserMapper : BaseMapper<User> {
     fun selectUserById(id: Int): UserDTO
 
     @DS("db2")
-    fun selectUserPage(page: Page<UserDTO>, username: String): IPage<UserDTO>
+    fun selectUserPage(page: Page<UserDTO>, userQO: UserQO): IPage<UserDTO>
 }

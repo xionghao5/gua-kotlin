@@ -13,7 +13,7 @@
         select username,
                password
         from sys_user
-        where username = #{username}
+        where username = #{userQO.username}
     </select>
 
 </mapper>

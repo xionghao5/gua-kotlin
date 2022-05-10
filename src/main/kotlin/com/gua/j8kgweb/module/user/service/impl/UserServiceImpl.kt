@@ -29,6 +29,6 @@ class UserServiceImpl(
 
     override fun getPage(userQO: UserQO): IPage<UserDTO> {
         var page = Page<UserDTO>(userQO.pageNo, userQO.pageSize)
-        return userMapper.selectUserPage(page, userQO.username)
+        return userMapper.selectUserPage(page, userQO)
     }
 }
